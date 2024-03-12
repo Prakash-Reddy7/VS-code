@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* Add styling for the game container */
+.game-container {
+    background-color: #222;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .tracing-line {
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .brainy {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    max-width: 100px;
+  }
+  
+  .brainy-home {
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+  

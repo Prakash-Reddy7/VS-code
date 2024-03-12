@@ -1,0 +1,24 @@
+
+/* Your existing CSS styles */
+
+/* Additional styles for the new elements */
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.product-list {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Additional styles for product listing */
+}

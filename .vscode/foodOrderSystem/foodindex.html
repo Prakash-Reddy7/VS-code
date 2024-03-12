@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order System</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Order System</h1>
+
+        <!-- Display dining tables -->
+        <h2>Dining Tables</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Table ID</th>
+                    <th>Customer Name</th>
+                    <th>Phone Number</th>
+                    <th>Table Number</th>
+                    <th>Booked</th>
+                </tr>
+            </thead>
+            <tbody id="tableList">
+                <tr th:each="table : ${tables}">
+                    <td th:text="${table.id}"></td>
+                    <td th:text="${table.customerName}"></td>
+                    <td th:text="${table.phoneNumber}"></td>
+                    <td th:text="${table.tableNumber}"></td>
+                    <td th:text="${table.booked} ? 'Yes' : 'No'"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Create a new dining table -->
+        <h2>Create a New Dining Table</h2>
+        <form id="createTableForm" th:action="@{/tables/bookTable}" method="post" th:object="${diningTable}">
+            <div class="form-group">
+                <label for="customerName">Customer Name</label>
+                <input type="text" class="form-control" id="customerName" th:field="*{customerName}" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" th:field="*{phoneNumber}" required>
+            </div>
+            <div class="form-group">
+                <label for="tableNumber">Table Number</label>
+                <input type="text" class="form-control" id="tableNumber" th:field="*{tableNumber}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</body>
+</html>

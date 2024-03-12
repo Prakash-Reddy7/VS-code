@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Game</title>
+  <style>
+    /* Add your additional styles here */
+    .game-container {
+      /* Add any styles for the game container */
+      background-color: #222;
+    }
+
+    .header {
+      /* Add styles for the header */
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .tracing-line {
+      /* Add styles for the tracing line */
+      width: 80%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .brainy {
+      /* Add styles for the Brainy image at the bottom right corner */
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      max-width: 100px;
+    }
+
+    .brainy-home {
+      /* Add styles for the Brainy image at the bottom of the home screen */
+      width: 80%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- The game screen will be contained in this div -->
+<div class="game-container">
+
+  <!-- Header -->
+  <div class="header">
+    Games
+  </div>
+
+  <!-- Tracing Line Image -->
+  <img class="tracing-line" src="tracing-line-image.jpg" alt="Tracing Line Image">
+
+  <!-- Brainy at the bottom right corner -->
+  <img class="brainy" src="brainy-image.jpg" alt="Brainy Image">
+
+  <!-- Brainy at the bottom of the home screen linked to game_screen.js -->
+  <a href="game_screen.js">
+    <img class="brainy-home" src="brainy-home-image.jpg" alt="Brainy Home Image">
+  </a>
+
+</div>
+
+</body>
+</html>
